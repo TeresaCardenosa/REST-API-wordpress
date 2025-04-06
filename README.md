@@ -1,22 +1,43 @@
-# REST-API-wordpress
+# Guide to Using the WordPress REST API in Python
 
-Guide to Using the WordPress REST API in Python
-Imagina que tienes un blog en WordPress grande, enorme, GIGANTE. Llevas años compartiendo contenido, creciendo en visitas y comunidad. Has creado nuevas categorías y, según ha ido evolucionando tu contenido, también has ido creando nuevas etiquetas en tus contenidos.
-Como resultado, tienes una página muy bien posicionada en Google (bien hecho SEO!) pero surge un imprevisto. Puede ser que tengas que modificar las categorías, localizar ciertas entradas publicadas en una fecha de tiempo, cambiar la estructura de las páginas…
-Revisar todo el contenido manualmente es una enorme molestia, así que aquí tienes los primeros pasos con Python y la API REST de WordPress.
- 
-Reto aceptado | Objetivo
-Disponer de un dataset completo y estructurado de los artículos publicados en un blog de Wordpress, incluyendo campos clave como:
-Título
-URL
-Fecha de publicación
-Categorías
-Tags
- 
-Requisitos
-Python
-Bibliotecas: request, pandas
- 
-Notas:
-Para usar al API, necesitarás las credenciales de acceso a WordPress. En lugar de ello, aquí generamos una contraseña “temporal” que se usará solo para ejecutar el código. Para acceder a ella, debes entrar en el panel de WordPress, “Usuarios” y “Perfil”. Ahí desplázate hacia abajo, hasta “Contraseñas de la aplicación”. Así, una vez que ejecutes el script, puedes revocar la contraseña y, ¡listo!
-REST API de Worpdress tiene límites de paginación (100 elementos por página). Por ejemplo, te puede afectar en la cantidad de entradas publicadas, pero también en otros aspectos, como la cantidad de etiquetas. Estos dos supuestos han sido solucionados en el código.
+Imagine you have a huge WordPress blog — massive, packed with content, years of publishing, a growing community and increasing traffic. You’ve added new categories, refined your tags, and your SEO efforts have paid off: your site ranks high on Google. Nice job!
+
+But now, something unexpected comes up. Maybe you need to reorganize your categories, locate specific posts by publication date, or restructure parts of your site.
+
+Manually reviewing every piece of content? A nightmare.
+
+Here’s where **Python and the WordPress REST API come to the rescue**. Let’s start with a simple challenge:
+
+## 🎯 Challenge accepted | Goal
+
+Generate a complete, structured dataset of all published blog posts from a WordPress site, including:
+
+* Title  
+* URL  
+* Publication date  
+* Categories  
+* Tags  
+
+---
+
+## 💻 Requirements
+
+* Python  
+* Libraries: `requests`, `pandas`  
+
+---
+
+## 📒 Notes
+
+* To use the API, you'll need access credentials. Instead of using your main password, we’ll create a **temporary "application password"** just for this script.  
+To generate it:  
+  1. Go to your WordPress admin panel  
+  2. Navigate to **Users > Profile**  
+  3. Scroll down to **Application Passwords**, generate one and copy it  
+  4. Run the script, then **revoke** the password. Safe and done!
+
+* The WordPress REST API has **pagination limits** (100 items per page). This affects not only the number of posts retrieved, but also categories, tags, etc. These limitations are handled in the code.
+
+---
+
+Happy automating! 🔧📝
